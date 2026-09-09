@@ -1,0 +1,15 @@
+{
+  "name": "ExternApp · Ensino Médio",
+  "short_name": "ExternApp",
+  "description": "Jornada de estudos, eventos e pontos extras do Externato.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#061528",
+  "theme_color": "#061528",
+  "icons": [
+    {"src":"/assets/logo.png","sizes":"700x194","type":"image/png","purpose":"any"}
+  ]
+}

@@ -1,0 +1,18 @@
+appId: br.com.externapp.demo
+productName: ExternApp
+electronVersion: 41.10.7
+directories:
+  app: desktop
+  output: release
+files:
+  - '**/*'
+  - '!electron-builder.yml'
+asar: true
+win:
+  target:
+    - target: portable
+      arch: [x64]
+  signAndEditExecutable: false
+portable:
+  artifactName: ExternApp-Previa-Windows.exe
+compression: store
