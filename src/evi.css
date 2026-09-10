@@ -3,8 +3,7 @@
 .page-home .topbar,.page-overview .topbar{background:#030e1ee8;border-color:#1a3852;box-shadow:0 6px 30px #0002}
 .page-home .demo-bar,.page-overview .demo-bar{background:transparent;border:0;color:#8096ae}
 .page-home .footer,.page-overview .footer{background:transparent;border-color:#142b40}
-.page-home .topbar nav button.active,.page-overview .topbar nav button.lab-context{color:#ffdd26;border-color:#ffdd26;text-shadow:0 0 18px #ffcc0040}
-.page-overview .topbar nav button.active:not(.lab-context){border-color:transparent;color:#c0cede}
+.page-home .topbar nav button.active,.page-overview .topbar nav button.active{color:#ffdd26;border-color:#ffdd26;text-shadow:0 0 18px #ffcc0040}
 .page-home button:focus-visible,.page-overview button:focus-visible{outline:2px solid #50ceff;outline-offset:4px}
 .evi-home{max-width:1320px;margin:auto;padding:0 22px}
 .evi-hero{display:grid;grid-template-columns:1.05fr 1fr;min-height:455px;position:relative;align-items:center}
@@ -67,3 +66,37 @@
 .evi-hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}
 @media(min-width:1001px) and (max-width:1499px){.evi-dashboard{min-height:761.594px}}
 @media(max-width:650px){.evi-hero-art img{width:100%;height:100%}}
+
+/* Persistent desktop navigation */
+@media(min-width:1001px){
+ .app{padding-left:196px}
+ .app .topbar{position:fixed;inset:0 auto 0 0;width:196px;height:100vh;padding:25px 15px;display:flex;flex-direction:column;align-items:stretch;gap:35px;border:0;border-right:1px solid #17293f;background:#030e1e;z-index:30}
+ .app .topbar .brand{font-size:22px;gap:6px}
+ .app .topbar .brand-symbol{width:33px;height:35px}
+ .app .topbar .brand-symbol img{height:40px}
+ .app .topbar nav{display:flex;flex-direction:column;align-items:stretch;gap:9px;height:auto;width:100%;min-width:0;overflow:visible;flex:1}
+ .app .topbar nav button{width:100%;height:47px;justify-content:flex-start;border:0;border-left:3px solid transparent;border-radius:9px;padding:0 12px;gap:12px;font-size:12px;color:#9db1ce}
+ .app .topbar nav button:hover,.app .topbar nav button.active{border-left-color:#ffdf24!important;border-bottom-color:transparent!important;background:linear-gradient(90deg,#e4ce1e20,transparent);box-shadow:-9px 0 18px #ffe01812;color:#ffe22c!important;text-shadow:none}
+ .app .top-actions{width:100%;margin:0;gap:8px;justify-content:center}
+ .app .top-actions select{max-width:112px;font-size:11px}
+ .app .demo-bar{padding:17px 28px;font-size:10px}
+ .app .demo-bar .today{display:none}
+ .app main{padding:20px 24px 28px}
+}
+
+/* Overview is a dashboard; the 3D catalog remains a separate destination. */
+.overview-layout{display:grid;grid-template-columns:minmax(260px,30%) minmax(0,1fr);gap:22px;align-items:start}
+.overview-content{display:flex;flex-direction:column;gap:22px;min-width:0}
+.overview-metrics{margin:0}
+.overview-performance .section-heading,.overview-history .section-heading{align-items:flex-end}
+.overview-performance h2,.overview-history h2{margin:7px 0 0}
+.overview-subject{display:grid;grid-template-columns:minmax(150px,1fr) minmax(140px,2fr) 120px;align-items:center;gap:18px;width:100%;padding:16px 0;border-bottom:1px solid var(--line);text-align:left;color:var(--muted)}
+.overview-subject:last-child{border-bottom:0}
+.overview-subject>span{display:flex;align-items:center;gap:10px;color:#dbe8f7}
+.overview-subject>span svg{color:var(--blue)}
+.overview-subject progress{margin:0}
+.overview-subject small{text-align:right}
+.overview-subject:hover b{color:var(--yellow)}
+@media(max-width:1200px) and (min-width:1001px){.overview-layout{grid-template-columns:1fr}.overview-layout>.summary{display:grid;grid-template-columns:1fr 1fr}.overview-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:1000px){.overview-layout{grid-template-columns:1fr}.overview-layout>.summary{display:grid;grid-template-columns:1fr 1fr}.overview-metrics{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.overview-layout>.summary{display:flex}.overview-subject{grid-template-columns:1fr}.overview-subject small{text-align:left}.dashboard-heading .button-group{width:100%;flex-wrap:wrap}.dashboard-heading .button-group>*{flex:1}.overview-performance .section-heading,.overview-history .section-heading{align-items:flex-start}}

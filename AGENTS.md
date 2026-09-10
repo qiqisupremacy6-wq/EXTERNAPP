@@ -17,3 +17,7 @@ Organizar os modelos 3D por matéria e conteúdo, com modo de apresentação par
 
 ## Revisão visual de 09/09/2026
 Mascote: EVI, arara azul exploradora (arquivo public/assets/evi.png). Início minimalista navy, amarelo e ciano; sem barra de busca. Preservar todas as sete opções de navegação. No Painel, alterar somente o entorno do laboratório branco; manter componentes, dimensões, controles e questões. Única exceção textual interna: nome da mascote. Abas das quatro matérias acima do laboratório. Demais páginas preservadas, salvo troca de mascote.
+
+## Revisão de navegação de 10/09/2026
+A navegação principal deve permanecer como barra lateral, com a mesma estética navy, amarela e ciano, em todas as páginas no desktop. Painel e Laboratório 3D são destinos distintos: o Painel mostra somente o resumo da jornada, métricas, desempenho e histórico; os modelos e ferramentas 3D ficam exclusivamente no Laboratório 3D e nas missões práticas.
+
